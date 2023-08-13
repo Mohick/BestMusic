@@ -1,0 +1,97 @@
+{
+    "TopTrending": [
+        {
+            "id": 1,
+            "img": "Top Trending Img/Avicii Wating For Love.png",
+            "title": "Wating For Love",
+            "nameSinger": "Avicii"
+        },
+        {
+            "id": 2,
+            "img": "Top Trending Img/IMAGINE DRAGONS Bad Liar.jpg",
+            "title": "Bad Liar",
+            "nameSinger": "IMAGINE DRAGONS"
+        },
+        {
+            "id": 3,
+            "img": "Top Trending Img/Karic X Only C Co Choi Co Chiu.jpg",
+            "title": "Có Chơi Có Chịu",
+            "nameSinger": "karic X Only C"
+        },
+        {
+            "id": 4,
+            "img": "Top Trending Img/khoi vu a loi.jpg",
+            "title": "À Lôi",
+            "nameSinger": "Khôi Vũ X Masew"
+        },
+        {
+            "id": 5,
+            "img": "Top Trending Img/SonTungMTL Making My Way.jpg",
+            "title": "Making My Way",
+            "nameSinger": "Sơn Tùng MTP"
+        },
+        {
+            "id": 6,
+            "img": "Top Trending Img/SPECTER - CHU CU CAi  Nghe Bai Nay Di Em.jpg",
+            "title": "Nghe Bài Này Đi Em",
+            "nameSinger": "SPECTER - CHU CỦ CẢi"
+        },
+        {
+            "id": 7,
+            "img": "Top Trending Img/Vi Hamin Nho EM Khong Ngu Duoc.jpg",
+            "title": "Nhớ Em Không ngủ Được",
+            "nameSinger": "Vị X Hamin"
+        },
+        {
+            "id": 8,
+            "img": "Top Trending Img/Wiz Khalifa see you again.jpg",
+            "title": "See You Again",
+            "nameSinger": "Wiz Khalifa"
+        }
+    ],
+    "RecentView": [
+        {
+            "id": 1,
+            "img": "Top Trending Img/Avicii Wating For Love.png",
+            "title": "Wating For Love",
+            "nameSinger": "Avicii"
+        },
+        {
+            "id": 2,
+            "img": "Top Trending Img/IMAGINE DRAGONS Bad Liar.jpg",
+            "title": "Bad Liar",
+            "nameSinger": "IMAGINE DRAGONS"
+        },
+        {
+            "id": 3,
+            "img": "Top Trending Img/Karic X Only C Co Choi Co Chiu.jpg",
+            "title": "Có Chơi Có Chịu",
+            "nameSinger": "karic X Only C"
+        },
+        {
+            "id": 4,
+            "img": "Top Trending Img/khoi vu a loi.jpg",
+            "title": "À Lôi",
+            "nameSinger": "Khôi Vũ X Masew"
+        }
+    ],
+    "Account": [
+        {
+            "id": 1,
+            "username": "admin2k4",
+            "email": "admin2k42gmail.com",
+            "password": "admin2k4",
+            "playList": [
+                {
+                    "id": 1,
+                    "img": "./images/",
+                    "title": "some title",
+                    "nameSinger": "some body"
+                }
+            ]
+        }
+    ],
+    "": {
+        "name": "typicode"
+    }
+}
