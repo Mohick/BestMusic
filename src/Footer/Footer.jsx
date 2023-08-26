@@ -48,13 +48,15 @@ export default function Footer() {
                     <ul  className={clsx(cssFooter.form__box_description)}>
                         <li>
                             <a href="https://www.facebook.com/profile.php?id=100037548151586" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-facebook-f"></i>
+                                <i className="fab fa-facebook"></i>
+                                Facebook
                             </a>
 
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/d%C6%B0-nh%C3%A0n-33b4bb279/" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-linkedin-in"></i>
+                                <i className="fab fa-linkedin   "></i>
+                                Linkedin
                             </a>
                         </li>
                     </ul>

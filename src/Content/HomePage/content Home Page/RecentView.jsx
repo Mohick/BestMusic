@@ -1,4 +1,4 @@
-import cssTopTrending from "./Top Trending.module.scss"
+import cssTopTrending from "./Recent View.module.scss"
 import clsx from "clsx"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
@@ -36,18 +36,18 @@ export default function RecentView() {
                                 <img src={api.img} alt="" />
                             </div>
                             <div className={clsx(cssTopTrending.formTrending__box_name_song)}>
-                                <p>Name Song:</p>
-                                <p>{api.title}</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_song)}>Name Song:</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_title_song)}>{api.title}</p>
                             </div>
                             <div className={clsx(cssTopTrending.formTrending__box_name_singer)}>
 
-                                <p>Name Singer:</p>
-                                <p>{api.nameSinger}</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_singer)}>Name Singer:</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_title_singer)}>{api.nameSinger}</p>
                             </div>
 
                         </Link>
                     </div>
-                })}
+                }).slice(0,4)}
 
             </div>
 

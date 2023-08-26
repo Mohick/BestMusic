@@ -29,20 +29,20 @@ export default function TopTrending() {
             </div>
             <div className={clsx(cssTopTrending.formTrending__box_items)}>
                 {apis.map((api, index) => {
-                    return <div key={index} className={clsx(cssTopTrending.formTrending_items)}>
+                    return <div key={index} className={clsx(cssTopTrending.formTrending_items)} >
                         <Link to={`/song ${api.title}`}>
 
                             <div className={clsx(cssTopTrending.formTrending__box_img)}>
                                 <img src={api.img} alt="" />
                             </div>
                             <div className={clsx(cssTopTrending.formTrending__box_name_song)}>
-                                <p>Name Song:</p>
-                                <p>{api.title}</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_song)}>Name Song:</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_title_song)}>{api.title}</p>
                             </div>
                             <div className={clsx(cssTopTrending.formTrending__box_name_singer)}>
 
-                                <p>Name Singer:</p>
-                                <p>{api.nameSinger}</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_singer)}>Name Singer:</p>
+                                <p className={clsx(cssTopTrending.formTrending__name_title_singer)}>{api.nameSinger}</p>
                             </div>
 
                         </Link>
