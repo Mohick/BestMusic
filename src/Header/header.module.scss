@@ -42,6 +42,7 @@
                 justify-content: center;
                 align-items: center;
                 margin-right: .6rem;
+
                 li {
                     display: flex;
                     justify-content: center;
@@ -64,7 +65,7 @@
                         text-transform: capitalize;
                     }
                 }
-                
+
             }
         }
 
@@ -102,6 +103,29 @@
 
         .header__Sign {
             flex: 1;
+
+            .header__Sign__container_user {
+                flex: 1;
+                height: 100%;
+
+                a {
+                    text-decoration: none;
+                    .header__Sign__box_user {
+                        position: relative;
+                        display: flex;
+
+
+                        justify-content: flex-end;
+                        gap: 1rem;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 1.6rem;
+                        color: #fff;
+
+                    }
+                }
+
+            }
 
             ul {
                 display: flex;
@@ -375,6 +399,27 @@
                 justify-content: flex-end;
                 align-items: center;
 
+                .header__Sign__container_user {
+                    flex: 1;
+                    height: 100%;
+
+                    a {
+                        text-decoration: none;
+                        .header__Sign__box_user {
+                            position: relative;
+                            display: flex;
+                            justify-content: flex-end;
+                            gap: 1rem;
+                            align-items: center;
+                            height: 100%;
+                            font-size: 1.6rem;
+                            color: #fff;
+
+                        }
+
+                    }
+                }
+
                 .header__parent_sign {
                     display: flex;
                     justify-content: flex-end;
@@ -597,6 +642,30 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+
+
+                .header__Sign__container_user {
+                    flex: 1;
+                    height: 100%;
+                    display: inline-block;
+                    display: none;
+
+                    a {
+                        text-decoration: none;
+
+                        .header__Sign__box_user {
+                            position: relative;
+                            display: flex;
+                            justify-content: flex-end;
+                            gap: 1rem;
+                            align-items: center;
+                            height: 100%;
+                            font-size: 1.6rem;
+                            color: #fff;
+
+                        }
+                    }
+                }
 
                 .header__parent_sign {
                     display: none;

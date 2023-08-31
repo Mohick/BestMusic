@@ -30,7 +30,7 @@ export function handleModal(e) {
     }
     window.onresize = function () {
         switch (true) {
-            case window.innerWidth <= 880 && window.innerWidth >= 702:
+            case window.innerWidth <= 1020 && window.innerWidth >= 702 && !tabletModal.matches(`.${cssModalTablet.show_modal}`):
                 mobiModal.classList.remove(`${cssModalMobi.show_modal}`)
                 tagBar1.classList.remove(`${cssHeader.changesFormat1}`)
                 tagBar2.classList.remove(`${cssHeader.changesFormat2}`)
@@ -39,7 +39,7 @@ export function handleModal(e) {
                 tagBar2.classList.add(`${cssHeader.formatDefault2}`)
                 tagBar3.classList.add(`${cssHeader.formatDefault3}`)
                 break;
-            case window.innerWidth <= 701:
+            case window.innerWidth <= 701 && !mobiModal.matches(`.${cssModalMobi.show_modal}`):
                 tagBar1.classList.remove(`${cssHeader.changesFormat1}`)
                 tagBar2.classList.remove(`${cssHeader.changesFormat2}`)
                 tagBar3.classList.remove(`${cssHeader.changesFormat3}`)
@@ -51,7 +51,7 @@ export function handleModal(e) {
         }
     }
 
-    if (sizeCreen <= 880 && sizeCreen >= 702) {
+    if (sizeCreen <= 1020 && sizeCreen >= 702) {
         tabletModal.style.top = `${heightHeader}px`
         if (tabletModal.matches(`.${cssModalTablet.show_modal}`)) {
             setTimeout(() => {

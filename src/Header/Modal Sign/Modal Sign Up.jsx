@@ -8,7 +8,7 @@ import { handleOnblurpassword } from './Handle Value Input/Handle value Input Si
 import { handleOnblurRe_enterPassword } from './Handle Value Input/Handle value Input Sign Up/handle value re-enter password '
 import { handleOnForcus } from './Handle Value Input/Handle value Input Sign Up/handle onforcus'
 import { submitSignUp } from './Handle Value Input/Handle value Input Sign Up/Submit'
-export default function SignUp() {
+export default function SignUp() {      
 
     return (
         <div className={clsx(cssModalSignUp.modal__sign)} onClick={closeModalSignUp}>
@@ -19,9 +19,9 @@ export default function SignUp() {
                 <div className={clsx(cssModalSignUp.modal__sign_container_form)}>
                     <div className={clsx(cssModalSignUp.modal__sign_box_useName)}>
                         <label >Use Name</label>
-                        <input onBlur={e => handleOnblurUseName(e.target)}
+                        <input autoComplete="off" onBlur={e => handleOnblurUseName(e.target)}
                             onFocus={(e) => handleOnForcus(e)}
-                            type="text" placeholder='Use name' autoComplete='false' />
+                            type="text" placeholder='Use name' />
                         <div className={clsx(cssModalSignUp.modal__sign_box_Alert)}>
                             <span>
                             </span>
@@ -29,9 +29,9 @@ export default function SignUp() {
                     </div>
                     <div className={clsx(cssModalSignUp.modal__sign_box_email)}>
                         <label >Email</label>
-                        <input onBlur={(e) => handleOnblurEmail(e.target)}
+                        <input autoComplete="off" onBlur={(e) => handleOnblurEmail(e.target)}
                             onFocus={(e) => handleOnForcus(e)}
-                            type="email" autoComplete='false' placeholder='Email' />
+                            type="email" placeholder='Email' />
                         <div className={clsx(cssModalSignUp.modal__sign_box_Alert)}>
                             <span>
                             </span>
@@ -39,7 +39,7 @@ export default function SignUp() {
                     </div>
                     <div className={clsx(cssModalSignUp.modal__sign_box_password)}>
                         <label >Password</label>
-                        <input type="password" onBlur={(e) => handleOnblurpassword(e.target)}
+                        <input autoComplete="off" type="password" onBlur={(e) => handleOnblurpassword(e.target)}
                             onFocus={(e) => handleOnForcus(e)}
                             placeholder='Password' />
                         <div className={clsx(cssModalSignUp.modal__sign_box_Alert)}>
@@ -49,7 +49,7 @@ export default function SignUp() {
                     </div>
                     <div className={clsx(cssModalSignUp.modal__sign_box_re_enter_pasword)}>
                         <label htmlFor="">Re-enter password</label>
-                        <input type="password"
+                        <input autoComplete="off" type="password"
                             onBlur={(e) => handleOnblurRe_enterPassword(e.target)}
                             placeholder='Re-enter password' />
                         <div className={clsx(cssModalSignUp.modal__sign_box_Alert)}>

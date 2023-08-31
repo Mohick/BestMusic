@@ -9,8 +9,28 @@ import SignIn from "./Modal Sign/Modal Sign In"
 import { showModalSignIn } from "./Modal Sign/show modal sign in"
 import { showModalSignUp } from "./Modal Sign/show modal sign up"
 import { useEffect, useState } from "react"
-export default function Header(prop, user) {
-   console.log(typeof document.cookie);
+import { checkUser } from "./findUser"
+export default function Header() {
+    let [user, setUser] = useState()
+    useEffect(() => {
+        let check = true
+        if (!!checkUser()) {
+            fetch("http://localhost:3000/Account")
+                .then((response) => response.json())
+                .then((response) => {
+                    const findUser = response.find(user => user.username == checkUser().username)
+                    if (findUser.username == checkUser().username &&
+                        findUser.password == checkUser().password &&
+                        findUser.email == checkUser().email) {
+                        setUser(checkUser())
+                    }
+                })
+        } else {
+            setUser(false)
+        }
+
+    }, [])
+
     return (
         <header className={clsx(cssHeader.header)}>
             <div className={clsx(cssHeader.header__box)} id="gridSystems">
@@ -39,14 +59,30 @@ export default function Header(prop, user) {
                     <input type="submit" value="Search" className={clsx(cssHeader.header__inputSubmit)} />
                 </div>
                 <div className={clsx(cssHeader.header__Sign)}>
-                    <ul>
-                        <li onClick={showModalSignUp}>
-                            sign Up
-                        </li>
-                        <li onClick={showModalSignIn}>
-                            sign in
-                        </li>
-                    </ul>
+                    {!!user ?
+                        <div className={clsx(cssHeader.header__Sign__container_user)}>
+
+                            <Link to={"/Setting"}>
+                                <div className={clsx(cssHeader.header__Sign__box_user)} >
+                                    <div className={clsx(cssHeader.header__Sign_user)}>
+                                        {user.username}
+                                    </div>
+                                    <div className={clsx(cssHeader.header__Sign_font_user)}>
+                                        <i className="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                        :
+                        <ul className={clsx(cssHeader.header__parent_sign)}>
+                            <li className={clsx(cssHeader.header__parent_sign_up)} onClick={showModalSignUp}>
+                                sign Up
+                            </li>
+                            <li className={clsx(cssHeader.header__parent_sign_in)} onClick={showModalSignIn}>
+                                sign in
+                            </li>
+                        </ul>
+                    }
                 </div>
             </div>
             <div className={clsx(cssHeader.header__box_mobile_tablet)} id="gridSystems">
@@ -71,26 +107,28 @@ export default function Header(prop, user) {
                 </div>
                 <div className={clsx(cssHeader.header__box_sign)}>
 
-                    {true ? <ul className={clsx(cssHeader.header__parent_sign)}>
-                        <li className={clsx(cssHeader.header__parent_sign_up)} onClick={showModalSignUp}>
-                            sign Up
-                        </li>
-                        <li className={clsx(cssHeader.header__parent_sign_in)} onClick={showModalSignIn}>
-                            sign in
-                        </li>
-                    </ul>
-                        :
-                        <div>
-                            {console.log(2)}
-                            <div>
-                                <div>
-                                    {user.name}
+                    {!!user ?
+                        <div className={clsx(cssHeader.header__Sign__container_user)}>
+                            <Link to={"/Setting"}>
+                                <div className={clsx(cssHeader.header__Sign__box_user)} >
+                                    <div className={clsx(cssHeader.header__Sign_user)}>
+                                        {user.username}
+                                    </div>
+                                    <div className={clsx(cssHeader.header__Sign_font_user)}>
+                                        <i className="fa-solid fa-user"></i>
+                                    </div>
                                 </div>
-                                <div>
-                                    <i className="fa-solid fa-gear"></i>
-                                </div>
-                            </div>
+                            </Link>
                         </div>
+                        :
+                        <ul className={clsx(cssHeader.header__parent_sign)}>
+                            <li className={clsx(cssHeader.header__parent_sign_up)} onClick={showModalSignUp}>
+                                sign Up
+                            </li>
+                            <li className={clsx(cssHeader.header__parent_sign_in)} onClick={showModalSignIn}>
+                                sign in
+                            </li>
+                        </ul>
                     }
                 </div>
             </div >

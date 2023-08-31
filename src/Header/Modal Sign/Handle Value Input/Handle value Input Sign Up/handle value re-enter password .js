@@ -6,7 +6,7 @@ export function handleOnblurRe_enterPassword(e) {
         querySelector(`span`)
     const valuePassword = document.querySelector(`.${cssSignUp.modal__sign_box_password}`).
         querySelector(`input`)
-    if (e.value.trim() >= 8) {
+    if (e.value.trim().length >= 8) {
         alert.innerText = "".trim()
         alert.style.color = "green"
         e.style.border = ".1rem solid green"
@@ -16,7 +16,7 @@ export function handleOnblurRe_enterPassword(e) {
         alert.style.color = "red"
         e.style.border = ".1rem solid red"
     }
-    if (e.value.trim() == valuePassword.value.trim() && e.value.trim() >= 8) {
+    if (e.value.trim() == valuePassword.value.trim() && e.value.trim().length >= 8) {
         alert.innerText = "".trim()
         alert.style.color = "green"
         e.style.border = ".1rem solid green"
@@ -25,7 +25,7 @@ export function handleOnblurRe_enterPassword(e) {
         alert.innerText = " Please Check again password!"
         alert.style.color = "red"
         e.style.border = ".1rem solid red"
-
+        
     }
 
 }

@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import hienho from '../../../../public/poster slider img/HienHo.jpg';
-import musicFest from '../../../../public/poster slider img/Music Fest.jpg'
-import showMag from '../../../../public/poster slider img/show mag.jpg'
+import hienho from '../../../assets/poster slider img/HienHo.jpg';
+import musicFest from '../../../assets/poster slider img/Music Fest.jpg'
+import showMag from '../../../assets/poster slider img/show mag.jpg'
 import clsx from "clsx"
 export default  function Slide() {
     var settings = {

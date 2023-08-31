@@ -16,7 +16,7 @@ export default function SignIn() {
                         <label >Use Name Or Email</label>
                         <input type="text" 
                         onFocus={(e)=>handleForCusSignIn(e)}
-                        placeholder='Use Name Or Email' autoComplete='false' />
+                        placeholder='Use Name Or Email' autoComplete='off' />
                         <div className={clsx(cssModalSignIn.modal__sign_box_Alert)}>
                             <span>
                             </span>
@@ -24,7 +24,7 @@ export default function SignIn() {
                     </div>
                     <div className={clsx(cssModalSignIn.modal__sign_box_password)}>
                         <label >Password</label>
-                        <input type="password" placeholder='Password' 
+                        <input autoComplete='off'  type="password" placeholder='Password' 
                         onFocus={(e)=>handleForCusSignIn(e)}
                         
                         />

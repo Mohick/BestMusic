@@ -2,7 +2,6 @@ import cssTopTrending from "./Top Trending.module.scss"
 import clsx from "clsx"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-
 export default function TopTrending() {
     const getAPI = 'http://localhost:3000/TopTrending'
     let [apis, setAPI] = useState([])

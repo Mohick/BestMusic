@@ -4,49 +4,73 @@
       "id": 1,
       "img": "Top Trending Img/Avicii Wating For Love.png",
       "title": "Wating For Love",
-      "nameSinger": "Avicii"
+      "nameSinger": "Avicii",
+      "genre": "USA",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 2,
       "img": "Top Trending Img/IMAGINE DRAGONS Bad Liar.jpg",
       "title": "Bad Liar",
-      "nameSinger": "IMAGINE DRAGONS"
+      "nameSinger": "IMAGINE DRAGONS",
+      "genre": "USA",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 3,
       "img": "Top Trending Img/Karic X Only C Co Choi Co Chiu.jpg",
       "title": "Có Chơi Có Chịu",
-      "nameSinger": "karic X Only C"
+      "nameSinger": "karic X Only C",
+      "genre": "VN",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 4,
       "img": "Top Trending Img/khoi vu a loi.jpg",
       "title": "À Lôi",
-      "nameSinger": "Khôi Vũ X Masew"
+      "nameSinger": "Khôi Vũ X Masew",
+      "genre": "VN",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 5,
       "img": "Top Trending Img/SonTungMTL Making My Way.jpg",
       "title": "Making My Way",
-      "nameSinger": "Sơn Tùng MTP"
+      "nameSinger": "Sơn Tùng MTP",
+      "genre": "USA",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 6,
       "img": "Top Trending Img/SPECTER - CHU CU CAi  Nghe Bai Nay Di Em.jpg",
       "title": "Nghe Bài Này Đi Em",
-      "nameSinger": "SPECTER - CHU CỦ CẢi"
+      "nameSinger": "SPECTER - CHU CỦ CẢi",
+      "genre": "VN",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 7,
       "img": "Top Trending Img/Vi Hamin Nho EM Khong Ngu Duoc.jpg",
       "title": "Nhớ Em Không ngủ Được",
-      "nameSinger": "Vị X Hamin"
+      "nameSinger": "Vị X Hamin",
+      "genre": "VN",
+      "voice": "kasdmasmd",
+      "like": 0
     },
     {
       "id": 8,
       "img": "Top Trending Img/Wiz Khalifa see you again.jpg",
       "title": "See You Again",
-      "nameSinger": "Wiz Khalifa"
+      "nameSinger": "Wiz Khalifa",
+      "genre": "USA",
+      "voice": "kasdmasmd",
+      "like": 0
     }
   ],
   "RecentView": [
@@ -88,17 +112,86 @@
           "title": "À Lôi",
           "nameSinger": "Khôi Vũ X Masew"
         }
+      ],
+      "liked": [
+        0,
+        7,
+        2
       ]
-    },
-    {
-      "username": "addminaniansd",
-      "email": "asdasdads@gmail.com",
-      "password": "aadjadadjadaj",
-      "playList": [],
-      "id": 2
     }
   ],
-  "": {
-    "name": "typicode"
-  }
+  "Discover": [
+    {
+      "id": 1,
+      "img": "Discover/Waiting For Love/Avicii Wating For Love.png",
+      "title": "Wating For Love",
+      "nameSinger": "Avicii",
+      "genre": "USA",
+      "voice": "Discover/Waiting For Love/Waiting For Love.mp3",
+      "like": 0
+    },
+    {
+      "id": 2,
+      "img": "Discover/Bad Liar/IMAGINE DRAGONS Bad Liar.jpg",
+      "title": "Bad Liar",
+      "nameSinger": "IMAGINE DRAGONS",
+      "genre": "USA",
+      "voice": "Discover/Bad Liar/Bad Liar.mp3",
+      "like": 1
+    },
+    {
+      "id": 3,
+      "img": "Discover/Co Choi Co Chiu/Karic X Only C Co Choi Co Chiu.jpg",
+      "title": "Có Chơi Có Chịu",
+      "nameSinger": "karic X Only C",
+      "genre": "VN",
+      "voice": "Discover/Co Choi Co Chiu/Có Chơi Có Chịu - Karik, OnlyC.mp3",
+      "like": 0
+    },
+    {
+      "id": 4,
+      "img": "Discover/A Loi/khoi vu a loi.jpg",
+      "title": "À Lôi",
+      "nameSinger": "Khôi Vũ X Masew",
+      "genre": "VN",
+      "voice": "Discover/A Loi/ALoi-Double2TMasew-10119691.mp3",
+      "like": 0
+    },
+    {
+      "id": 5,
+      "img": "Discover/Making My Way/SonTungMTL Making My Way.jpg",
+      "title": "Making My Way",
+      "nameSinger": "Sơn Tùng MTP",
+      "genre": "USA",
+      "voice": "Discover/Making My Way/making-my-way-son-tung-m-tp.mp3",
+      "like": 0
+    },
+    {
+      "id": 6,
+      "img": "Discover/Nghe Bai Nay Di Em/SPECTER - CHU CU CAi  Nghe Bai Nay Di Em.jpg",
+      "title": "Nghe Bài Này Đi Em",
+      "nameSinger": "SPECTER - CHU CỦ CẢi",
+      "genre": "VN",
+      "voice": "Discover/Nghe Bai Nay Di Em/NgheBaiNayDiEm-CuCaiSpecterCHU-6242071.mp3",
+      "like": 0
+    },
+    {
+      "id": 7,
+      "img": "Discover/Nho Em Khong Ngu Duoc/Vi Hamin Nho EM Khong Ngu Duoc.jpg",
+      "title": "Nhớ Em Không ngủ Được",
+      "nameSinger": "Vị X Hamin",
+      "genre": "VN",
+      "voice": "Discover/Nho Em Khong Ngu Duoc/NhoEmKhongNguDuoc-HaminVi-6099064.mp3",
+      "like": 0
+    },
+    {
+      "id": 8,
+      "img": "Discover/See You Again/Wiz Khalifa see you again.jpg",
+      "title": "See You Again",
+      "nameSinger": "Wiz Khalifa",
+      "genre": "USA",
+      "voice": "Discover/See You Again/See you again.mp3",
+      "like": 0
+    }
+  ]
 }

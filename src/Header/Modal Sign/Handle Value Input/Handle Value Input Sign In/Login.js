@@ -39,12 +39,12 @@ export function logIn() {
         })
         .then(res => {
             if (res.findUserName && res.checkAccountlPassWord) {
+                closeModalSignIn();
                 const account = {
                     username: res.findUserName.username,
                     email: res.findUserName.email,
                     password: res.findUserName.password,
                 };
-                closeModalSignIn();
                 var accountString = JSON.stringify(account);
                 var date = new Date();
                 date.setTime(date.getTime() + (24 * 60 * 60 * 1000));
@@ -53,7 +53,19 @@ export function logIn() {
                 location.reload()
 
             } else if (res.findEmail && res.checkEmailPassWord) {
-                closeModalSignIn()
+                const account = {
+                    username: res.findEmail.username,
+                    email: res.findEmail.email,
+                    password: res.findEmail.password,
+                };
+
+                closeModalSignIn();
+                var accountString = JSON.stringify(account);
+                var date = new Date();
+                date.setTime(date.getTime() + (24 * 60 * 60 * 1000));
+                var expires = "expires=" + date.toUTCString();
+                document.cookie = "Account=" + accountString + ";" + expires;
+                location.reload()
             }
             else {
                 AlertUserName.style.color = "red"
