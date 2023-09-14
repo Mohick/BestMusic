@@ -5,223 +5,1027 @@
     .ProDucts__container_content {
         display: flex;
 
-        .ProDucts__box_products {
+        gap: .5rem;
+
+        .ProDucts__container_products {
             width: 70%;
-            border: 0.1rem solid #fff;
-            padding: 1rem;
 
-            .ProDucts__header {
+            .ProDucts__box_products {
                 width: 100%;
+                border: 0.1rem solid #fff;
+                padding: 1rem;
 
-                .ProDucts__header_title {
+                .ProDucts__header {
                     width: 100%;
-                    padding-bottom: 1rem;
 
-                    h2 {
-                        color: #fff;
-                        font-size: 2rem;
-                        text-align: center;
+                    .ProDucts__header_title {
+                        width: 100%;
+                        padding-bottom: 1rem;
+
+                        h2 {
+                            color: #fff;
+                            font-size: 2rem;
+                            text-align: center;
+                        }
+                    }
+
+                    .ProDucts__header_nameSignger {
+                        width: 100%;
+                        padding-bottom: 1rem;
+
+                        p {
+                            color: #fff;
+                            text-align: center;
+                        }
                     }
                 }
 
-                .ProDucts__header_nameSignger {
-                    width: 100%;
-                    padding-bottom: 1rem;
+                .ProDucts__box_img_disk {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
 
-                    p {
-                        color: #fff;
-                        text-align: center;
-                    }
-                }
-            }
-
-            .ProDucts__box_img_disk {
-                display: flex;
-                justify-content: center;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    -webkit-border-radius: 50%;
-                    -moz-border-radius: 50%;
-                    -ms-border-radius: 50%;
-                    -o-border-radius: 50%;
-
-                }
-
-                .ProDucts__img_disk {
-
-                    img {
-
-
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
                         border-radius: 50%;
                         -webkit-border-radius: 50%;
                         -moz-border-radius: 50%;
                         -ms-border-radius: 50%;
                         -o-border-radius: 50%;
-                        height: 30rem;
-
-                        &.turnDisk {
-                            animation: turnDisk 1s infinite linear;
-                            -webkit-animation: turnDisk 1s infinite linear;
-                        }
-
-                        &.pauseDisk {
-                            animation-play-state: paused;
-                        }
-                    }
-                }
-            }
-
-            .ProDucts__box_control {
-                width: 100%;
-
-                .ProDucts__box_voices {
-
-                    .ProDucts__box_voices_slider {
-                        display: block;
-
-                        audio {
-                            display: none;
-                        }
-
-                        input {
-
-                            width: 100%;
-                            height: .5rem;
-                            cursor: pointer;
-                            accent-color: #82CFD0;
-                            will-change: all;
-                            outline: none;
-                           
-                        }
 
                     }
 
-                    .ProDucts__box_voices_times {
-                        display: flex;
-                        padding: .5rem;
-                        justify-content: space-between;
+                    .ProDucts__img_disk {
 
-                        .ProDucts__box_voices_currentTimes {
-                            color: #fff;
-                            font-size: 1.4rem;
-                        }
+                        img {
 
-                        .ProDucts__box_voices_duration {
-                            @extend .ProDucts__box_voices_currentTimes
+
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            height: 30rem;
+
+                            &.turnDisk {
+                                animation: turnDisk 1s infinite linear;
+                                -webkit-animation: turnDisk 1s infinite linear;
+                            }
+
+                            &.pauseDisk {
+                                animation-play-state: paused;
+                            }
                         }
                     }
                 }
 
-                .ProDucts__voice_control {
-                    display: flex;
-                    justify-content: space-around;
-                    margin-top: 2rem;
+                .ProDucts__box_control {
+                    width: 100%;
 
-                    .ProDucts_control_repeat {
-                        font-size: 1.6rem;
-                        color: #fff;
-                        cursor: pointer;
-                    }
+                    .ProDucts__box_voices {
 
-                    .ProDucts_control_backStep {
-                        @extend .ProDucts_control_repeat;
-                    }
-
-                    .ProDucts_control_play_pouse {
-                        @extend .ProDucts_control_repeat;
-
-                        .ProDucts_control_play {
+                        .ProDucts__box_voices_slider {
                             display: block;
+
+                            audio {
+                                display: none;
+                            }
+
+                            input {
+
+                                width: 100%;
+                                height: .5rem;
+                                cursor: pointer;
+                                accent-color: #82CFD0;
+                                will-change: all;
+                                outline: none;
+
+                            }
+
                         }
 
-                        .ProDucts_control_pouse {
-                            display: none;
+                        .ProDucts__box_voices_times {
+                            display: flex;
+                            padding: .5rem;
+                            justify-content: space-between;
+
+                            .ProDucts__box_voices_currentTimes {
+                                color: #fff;
+                                font-size: 1.4rem;
+                            }
+
+                            .ProDucts__box_voices_duration {
+                                color: #fff;
+                                font-size: 1.4rem;
+                            }
                         }
                     }
 
-                    .ProDucts_control_nextStep {
-                        @extend .ProDucts_control_repeat;
-                    }
+                    .ProDucts__voice_control {
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 2rem;
 
-                    .ProDucts_control_likes {
-                        @extend .ProDucts_control_repeat;
-
-                        .ProDucts_control_likeflautLike {
-                            display: none;
+                        .ProDucts_control_repeat {
+                            font-size: 1.6rem;
+                            color: #fff;
+                            cursor: pointer;
                             position: relative;
-
-
-
-                            i {
-                                margin-right: .5rem;
+                            &.loopSongs{
+                                color: #0066FF;
                             }
-
                             &::after {
+                                content: '';
                                 position: absolute;
-                                content: "";
-                                left: 0;
-                                bottom: 0;
                                 width: 100%;
                                 height: 100%;
-
-                            }
-
-                            &.showLIked {
-                                display: block;
+                                left: 0;
+                                bottom: 0;
                             }
                         }
 
-                        .ProDucts_control_like {
-                            display: none;
-                            position: relative;
+                        .ProDucts_control_volume {
+                            display: flex;
+                            left: 1;
+                            gap: .4rem;
+                            align-items: center;
+                            input {
+                                
+                                flex: 1;
+                                accent-color: #fff;
+                                cursor: pointer;
+                            }
 
-                            &.showLIked {
+                            .ProDucts_control_volume_max {
+                                color: #fff;
+                                display: none;
+
+
+                                &.modeSpeaker {
+                                    display: block;
+                                }
+                            }
+
+                            .ProDucts_control_volume_medium {
+                                color: #fff;
+                                display: none;
+
+
+                                &.modeSpeaker {
+                                    display: block;
+                                }
+                            }
+
+                            .ProDucts_control_volume_mute {
+                                color: #fff;
+                                display: none;
+
+
+                                &.modeSpeaker {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .ProDucts_control_play_pouse {
+                            font-size: 1.6rem;
+                            color: #fff;
+                            cursor: pointer;
+
+                            .ProDucts_control_play {
                                 display: block;
                             }
 
-                            i {
-                                margin-right: .5rem;
+                            .ProDucts_control_pouse {
+                                display: none;
+                            }
+                        }
+
+                        .ProDucts_control_nextStep {
+                            font-size: 1.6rem;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+
+                        .ProDucts_control_likes {
+                            font-size: 1.6rem;
+                            color: #fff;
+                            cursor: pointer;
+
+                            .ProDucts_control_likeflautLike {
+                                display: none;
+                                position: relative;
+
+
+
+                                i {
+                                    margin-right: .5rem;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                    height: 100%;
+
+                                }
+
+                                &.showLIked {
+                                    display: block;
+                                }
                             }
 
-                            &::after {
-                                position: absolute;
-                                content: "";
-                                left: 0;
-                                bottom: 0;
-                                width: 100%;
-                                height: 100%;
+                            .ProDucts_control_like {
+                                display: none;
+                                position: relative;
 
+                                &.showLIked {
+                                    display: block;
+                                }
+
+                                i {
+                                    margin-right: .5rem;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                    height: 100%;
+
+                                }
                             }
                         }
                     }
                 }
             }
         }
+
+        .ProDucts__box_other {
+            width: 30%;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+
+        }
     }
+
+    @keyframes turnDisk {
+        0% {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+        }
+    }
+
+
+
+
+
 }
 
-@keyframes turnDisk {
-    0% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
+@media only screen and (max-width: 1000px) and (min-width: 768px) {
+    .ProDucts__container {
+        width: 100%;
+        padding: 1rem 0;
+
+        .ProDucts__container_content {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .ProDucts__container_products {
+                width: 100%;
+
+                .ProDucts__box_products {
+                    width: 100%;
+                    border: 0.1rem solid #fff;
+                    padding: 1rem;
+
+                    .ProDucts__header {
+                        width: 100%;
+
+                        .ProDucts__header_title {
+                            width: 100%;
+                            padding-bottom: 1rem;
+
+                            h2 {
+                                color: #fff;
+                                font-size: 2rem;
+                                text-align: center;
+                            }
+                        }
+
+                        .ProDucts__header_nameSignger {
+                            width: 100%;
+                            padding-bottom: 1rem;
+
+                            p {
+                                color: #fff;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .ProDucts__box_img_disk {
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+
+                        }
+
+                        .ProDucts__img_disk {
+
+                            img {
+
+
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+                                height: 30rem;
+
+                                &.turnDisk {
+                                    animation: turnDisk 1s infinite linear;
+                                    -webkit-animation: turnDisk 1s infinite linear;
+                                }
+
+                                &.pauseDisk {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        }
+                    }
+
+                    .ProDucts__box_control {
+                        width: 100%;
+
+                        .ProDucts__box_voices {
+
+                            .ProDucts__box_voices_slider {
+                                display: block;
+
+                                audio {
+                                    display: none;
+                                }
+
+                                input {
+
+                                    width: 100%;
+                                    height: .5rem;
+                                    cursor: pointer;
+                                    accent-color: #82CFD0;
+                                    will-change: all;
+                                    outline: none;
+
+                                }
+
+                            }
+
+                            .ProDucts__box_voices_times {
+                                display: flex;
+                                padding: .5rem;
+                                justify-content: space-between;
+
+                                .ProDucts__box_voices_currentTimes {
+                                    color: #fff;
+                                    font-size: 1.4rem;
+                                }
+
+                                .ProDucts__box_voices_duration {
+                                    font-size: 1.4rem;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+
+                        .ProDucts__voice_control {
+                            display: flex;
+                            justify-content: space-around;
+                            margin-top: 2rem;
+
+                            .ProDucts_control_repeat {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+
+                            .ProDucts_control_volume {
+                                display: flex;
+
+                                input {
+                                    width: 5rem;
+                                }
+                            }
+
+                            .ProDucts_control_play_pouse {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+
+                                .ProDucts_control_play {
+                                    display: block;
+                                }
+
+                                .ProDucts_control_pouse {
+                                    display: none;
+                                }
+                            }
+
+                            .ProDucts_control_nextStep {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+
+                            .ProDucts_control_likes {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+
+                                .ProDucts_control_likeflautLike {
+                                    display: none;
+                                    position: relative;
+
+
+
+                                    i {
+                                        margin-right: .5rem;
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+
+                                    }
+
+                                    &.showLIked {
+                                        display: block;
+                                    }
+                                }
+
+                                .ProDucts_control_like {
+                                    display: none;
+                                    position: relative;
+
+                                    &.showLIked {
+                                        display: block;
+                                    }
+
+                                    i {
+                                        margin-right: .5rem;
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProDucts__box_other {
+                width: 100%;
+                margin-top: 1REM;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+
+                .ProDucts__box_other_songs {
+                    width: 100%;
+                    margin-top: 1REM;
+                    display: block;
+
+                    h2 {
+                        color: #fff;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
     }
 
-    100% {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 768px) and (min-width:550px) {
+    .ProDucts__container {
+        width: 100%;
+        padding: 1rem 0;
+
+        .ProDucts__container_content {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .ProDucts__container_products {
+                width: 100%;
+
+                .ProDucts__box_products {
+                    width: 100%;
+                    border: 0.1rem solid #fff;
+                    padding: 1rem;
+
+                    .ProDucts__header {
+                        width: 100%;
+
+                        .ProDucts__header_title {
+                            width: 100%;
+                            padding-bottom: 1rem;
+
+                            h2 {
+                                color: #fff;
+                                font-size: 2rem;
+                                text-align: center;
+                            }
+                        }
+
+                        .ProDucts__header_nameSignger {
+                            width: 100%;
+                            padding-bottom: 1rem;
+
+                            p {
+                                color: #fff;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .ProDucts__box_img_disk {
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+
+                        }
+
+                        .ProDucts__img_disk {
+
+                            img {
+
+
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+                                height: 30rem;
+
+                                &.turnDisk {
+                                    animation: turnDisk 1s infinite linear;
+                                    -webkit-animation: turnDisk 1s infinite linear;
+                                }
+
+                                &.pauseDisk {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        }
+                    }
+
+                    .ProDucts__box_control {
+                        width: 100%;
+
+                        .ProDucts__box_voices {
+
+                            .ProDucts__box_voices_slider {
+                                display: block;
+
+                                audio {
+                                    display: none;
+                                }
+
+                                input {
+
+                                    width: 100%;
+                                    height: .5rem;
+                                    cursor: pointer;
+                                    accent-color: #82CFD0;
+                                    will-change: all;
+                                    outline: none;
+
+                                }
+
+                            }
+
+                            .ProDucts__box_voices_times {
+                                display: flex;
+                                padding: .5rem;
+                                justify-content: space-between;
+
+                                .ProDucts__box_voices_currentTimes {
+                                    color: #fff;
+                                    font-size: 1.4rem;
+                                }
+
+                                .ProDucts__box_voices_duration {
+                                    color: #fff;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+
+                        .ProDucts__voice_control {
+                            display: flex;
+                            justify-content: space-around;
+                            margin-top: 2rem;
+
+                            .ProDucts_control_repeat {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+
+                            .ProDucts_control_volume {
+                                display: flex;
+
+                                input {
+                                    width: 5rem;
+                                }
+                            }
+
+                            .ProDucts_control_play_pouse {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+
+                                .ProDucts_control_play {
+                                    display: block;
+                                }
+
+                                .ProDucts_control_pouse {
+                                    display: none;
+                                }
+                            }
+
+                            .ProDucts_control_nextStep {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+
+                            .ProDucts_control_likes {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+
+                                .ProDucts_control_likeflautLike {
+                                    display: none;
+                                    position: relative;
+
+
+
+                                    i {
+                                        margin-right: .5rem;
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+
+                                    }
+
+                                    &.showLIked {
+                                        display: block;
+                                    }
+                                }
+
+                                .ProDucts_control_like {
+                                    display: none;
+                                    position: relative;
+
+                                    &.showLIked {
+                                        display: block;
+                                    }
+
+                                    i {
+                                        margin-right: .5rem;
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProDucts__box_other {
+                width: 100%;
+                margin-top: 1REM;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
     }
+
+}
+
+@media only screen and (max-width:550px) {
+    .ProDucts__container {
+        width: 100%;
+        padding: 1rem 0;
+
+        .ProDucts__container_content {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .ProDucts__container_products {
+                width: 100%;
+
+                .ProDucts__box_products {
+                    width: 100%;
+                    border: 0.1rem solid #fff;
+                    padding: 1rem;
+
+                    .ProDucts__header {
+                        width: 100%;
+
+                        .ProDucts__header_title {
+                            width: 100%;
+                            padding-bottom: 1rem;
+
+                            h2 {
+                                color: #fff;
+                                font-size: 2rem;
+                                text-align: center;
+                            }
+                        }
+
+                        .ProDucts__header_nameSignger {
+                            width: 100%;
+                            padding-bottom: 1rem;
+
+                            p {
+                                color: #fff;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .ProDucts__box_img_disk {
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+
+                        }
+
+                        .ProDucts__img_disk {
+
+                            img {
+
+
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+                                height: 30rem;
+
+                                &.turnDisk {
+                                    animation: turnDisk 1s infinite linear;
+                                    -webkit-animation: turnDisk 1s infinite linear;
+                                }
+
+                                &.pauseDisk {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        }
+                    }
+
+                    .ProDucts__box_control {
+                        width: 100%;
+
+                        .ProDucts__box_voices {
+
+                            .ProDucts__box_voices_slider {
+                                display: block;
+
+                                audio {
+                                    display: none;
+                                }
+
+                                input {
+
+                                    width: 100%;
+                                    height: .5rem;
+                                    cursor: pointer;
+                                    accent-color: #82CFD0;
+                                    will-change: all;
+                                    outline: none;
+
+                                }
+
+                            }
+
+                            .ProDucts__box_voices_times {
+                                display: flex;
+                                padding: .5rem;
+                                justify-content: space-between;
+
+                                .ProDucts__box_voices_currentTimes {
+                                    color: #fff;
+                                    font-size: 1.4rem;
+                                }
+
+                                .ProDucts__box_voices_duration {
+                                    color: #fff;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+
+                        .ProDucts__voice_control {
+                            display: flex;
+                            justify-content: space-around;
+                            margin-top: 2rem;
+
+                            .ProDucts_control_repeat {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+
+                            .ProDucts_control_volume {
+                                display: flex;
+
+                                input {
+                                    width: 5rem;
+                                }
+                            }
+
+                            .ProDucts_control_play_pouse {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+
+                                .ProDucts_control_play {
+                                    display: block;
+                                }
+
+                                .ProDucts_control_pouse {
+                                    display: none;
+                                }
+                            }
+
+                            .ProDucts_control_nextStep {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+
+                            .ProDucts_control_likes {
+                                font-size: 1.6rem;
+                                color: #fff;
+                                cursor: pointer;
+
+                                .ProDucts_control_likeflautLike {
+                                    display: none;
+                                    position: relative;
+
+
+
+                                    i {
+                                        margin-right: .5rem;
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+
+                                    }
+
+                                    &.showLIked {
+                                        display: block;
+                                    }
+                                }
+
+                                .ProDucts_control_like {
+                                    display: none;
+                                    position: relative;
+
+                                    &.showLIked {
+                                        display: block;
+                                    }
+
+                                    i {
+                                        margin-right: .5rem;
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: "";
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 100%;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProDucts__box_other {
+                width: 100%;
+                margin-top: 1REM;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+            }
+        }
+    }
+
 }

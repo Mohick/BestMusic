@@ -1,0 +1,247 @@
+.container_Items {
+    width: 100%;
+
+    .linkItems {
+        width: 100%;
+        text-decoration: none;
+        color: #000;
+
+        .box_Items {
+            width: 100%;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: .5rem;
+            -webkit-border-radius: .5rem;
+            -moz-border-radius: .5rem;
+            -ms-border-radius: .5rem;
+            -o-border-radius: .5rem;
+            width: 100%;
+            text-decoration: none;
+            color: #000;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: calc(100% + 1rem);
+                height: calc(100% + 1rem);
+            }
+
+            position: relative;
+
+
+
+            .Discover__box_img {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    border-radius: 1.5rem;
+                    -webkit-border-radius: 1.5rem;
+                    -moz-border-radius: 1.5rem;
+                    -ms-border-radius: 1.5rem;
+                    -o-border-radius: 1.5rem;
+                    max-height: 14.8rem;
+                    min-height: 14.8rem;
+                    height: 14.8rem;
+                }
+            }
+
+            .Discover__box_name_song {
+                width: 100%;
+                display: flex;
+
+
+
+                .Discover__name_song {
+                    font-size: 1.3rem;
+                    opacity: 0.7;
+
+                }
+
+                .Discover__name_title_song {
+                    flex: 1;
+                    display: block;
+                    display: -webkit-box;
+                    font-size: 1.3rem;
+                    opacity: 0.9;
+                    font-weight: bold;
+                    font-style: italic;
+                    width: 90%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+
+                }
+
+            }
+
+            .Discover__box_name_singer {
+                width: 100%;
+                display: flex;
+
+                .Discover__name_title_singer {
+                    flex: 1;
+                    display: block;
+                    display: -webkit-box;
+                    font-size: 1.3rem;
+                    opacity: 0.9;
+                    font-weight: bold;
+                    font-style: italic;
+                    width: 90%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+
+                .Discover__name_singer {
+                    font-size: 1.3rem;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.box_showMore {
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+
+    h3 {
+        color: #333;
+        text-align: center;
+    }
+
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .linkItems {
+        width: 100%;
+        text-decoration: none;
+        color: #000;
+
+        .box_Items {
+            width: 100%;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: .5rem;
+            -webkit-border-radius: .5rem;
+            -moz-border-radius: .5rem;
+            -ms-border-radius: .5rem;
+            -o-border-radius: .5rem;
+            width: 100%;
+            text-decoration: none;
+            color: #000;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: calc(100% + 1rem);
+                height: calc(100% + 1rem);
+            }
+
+            position: relative;
+
+
+
+            .Discover__box_img {
+                width: 100%;
+
+                img {
+                    width: 33, 9rem;
+                    border-radius: 1.5rem;
+                    -webkit-border-radius: 1.5rem;
+                    -moz-border-radius: 1.5rem;
+                    -ms-border-radius: 1.5rem;
+                    -o-border-radius: 1.5rem;
+                    max-height: 14.8rem;
+                    min-height: 14.8rem;
+                    height: 14.8rem;
+                }
+            }
+
+            .Discover__box_name_song {
+                width: 100%;
+                display: flex;
+
+
+
+                .Discover__name_song {
+                    font-size: 1.3rem;
+                    opacity: 0.7;
+
+                }
+
+                .Discover__name_title_song {
+                    flex: 1;
+                    display: block;
+                    display: -webkit-box;
+                    font-size: 1.3rem;
+                    opacity: 0.9;
+                    font-weight: bold;
+                    font-style: italic;
+                    width: 90%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+
+                }
+
+            }
+
+            .Discover__box_name_singer {
+                display: flex;
+                display: flex;
+
+                .Discover__name_title_singer {
+                    flex: 1;
+                    display: block;
+                    display: -webkit-box;
+                    font-size: 1.3rem;
+                    opacity: 0.9;
+                    font-weight: bold;
+                    font-style: italic;
+                    width: 90%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+
+                .Discover__name_singer {
+                    font-size: 1.3rem;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .box_showMore {
+        width: 100%;
+        padding: 1rem;
+        background-color: #fff;
+
+        h3 {
+            color: #333;
+            text-align: center;
+        }
+
+        border-radius: .5rem;
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        -ms-border-radius: .5rem;
+        -o-border-radius: .5rem;
+    }
+}

@@ -114,10 +114,35 @@
         }
       ],
       "liked": [
-        0,
-        7,
-        2
+        4,
+        2,
+        1,
+        8
       ]
+    },
+    {
+      "username": "ádaaaaaaaaaaaa",
+      "email": "ádaaaaaaaaaaaa@gmail.com",
+      "password": "ádaaaaaaaaaaaa@gmail.com",
+      "playList": [],
+      "liked": [],
+      "id": 2
+    },
+    {
+      "username": "asdasdasdasda@gmail.com",
+      "email": "asdasdasdasda@gmail.com",
+      "password": "asdasdasdasda@gmail.com",
+      "playList": [],
+      "liked": [],
+      "id": 3
+    },
+    {
+      "username": "ádsadsadsadadssa@gmail.com",
+      "email": "ádsadsadsadadssa@gmail.com",
+      "password": "ádsadsadsadadssa@gmail.com",
+      "playList": [],
+      "liked": [],
+      "id": 4
     }
   ],
   "Discover": [
@@ -128,7 +153,7 @@
       "nameSinger": "Avicii",
       "genre": "USA",
       "voice": "Discover/Waiting For Love/Waiting For Love.mp3",
-      "like": 0
+      "like": 1
     },
     {
       "id": 2,
@@ -137,7 +162,7 @@
       "nameSinger": "IMAGINE DRAGONS",
       "genre": "USA",
       "voice": "Discover/Bad Liar/Bad Liar.mp3",
-      "like": 1
+      "like": 11
     },
     {
       "id": 3,
@@ -155,7 +180,7 @@
       "nameSinger": "Khôi Vũ X Masew",
       "genre": "VN",
       "voice": "Discover/A Loi/ALoi-Double2TMasew-10119691.mp3",
-      "like": 0
+      "like": 1
     },
     {
       "id": 5,
@@ -191,7 +216,7 @@
       "nameSinger": "Wiz Khalifa",
       "genre": "USA",
       "voice": "Discover/See You Again/See you again.mp3",
-      "like": 0
+      "like": 2
     }
   ]
 }

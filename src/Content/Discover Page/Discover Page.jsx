@@ -20,7 +20,7 @@ export default function Discover() {
         }
         return () => check = false
     }, [])
-    let [pushItems, setPushItems] = useState(3)
+ 
     return (
         <div className={clsx(cssDiscover.Discover__container_content)}>
             <div id="gridSystems" className={clsx(cssDiscover.Discover__box_content)}>
@@ -31,9 +31,9 @@ export default function Discover() {
                     <div className={clsx(cssDiscover.Discover__content_bar)}>
                         <ul className={clsx(cssDiscover.Discover__bar_list)}>
                             <li>Select Music language</li>
-                            <li className={clsx(cssDiscover.Discover__bar_items_1)} onClick={()=>setPushItems(pushItems + 3)}>all songs</li>
-                            <li className={clsx(cssDiscover.Discover__bar_items_2)}>English songs</li>
-                            <li className={clsx(cssDiscover.Discover__bar_items_3)}>VietNam songs</li>
+                            <li className={clsx(cssDiscover.Discover__bar_items_1)} ><Link to={"/Discover"}>Discover</Link></li>
+                            <li className={clsx(cssDiscover.Discover__bar_items_2)}><Link to={"/English Songs"}>English songs</Link></li>
+                            <li className={clsx(cssDiscover.Discover__bar_items_3)}><Link to={"/Viet Nam Songs"}>Viet Nam Songs</Link></li>
                         </ul>
                     </div>
                     <div className={clsx(cssDiscover.Discover__content_items)}>
@@ -56,7 +56,7 @@ export default function Discover() {
 
                                 </Link>
                             </div>
-                        }).slice(0, pushItems)}
+                        })}
                     </div>
                 </div>
             </div>

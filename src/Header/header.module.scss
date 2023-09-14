@@ -71,26 +71,67 @@
 
         .header__search {
             flex: 3;
+            position: relative;
             display: flex;
 
-            .header__inputSearch {
+            .header__form_dropDown {
+                position: absolute;
+                top: 100%;
+                display: none;
+                left: 0;
+                background-color: #fff;
+                width: 100%;
 
+                ul {
+                    width: 100%;
+
+                    li {
+                        list-style: none;
+                        padding: 1rem;
+                        font-weight: bold;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                        a{
+                            text-decoration: underline;
+                            color: #000;
+                        }
+                    }
+
+                    border-radius: .8rem 0 0 .8rem;
+                    -webkit-border-radius: .8rem 0 0 .8rem;
+                    -moz-border-radius: .8rem 0 0 .8rem;
+                    -ms-border-radius: .8rem 0 0 .8rem;
+                    -o-border-radius: .8rem 0 0 .8rem;
+                }
+            }
+
+            .header__inputSearch {
                 flex: 1;
-                border-radius: 1.4rem 0 0 1.4rem;
-                -webkit-border-radius: 1.4rem 0 0 1.4rem;
-                -moz-border-radius: 1.4rem 0 0 1.4rem;
-                -ms-border-radius: 1.4rem 0 0 1.4rem;
-                -o-border-radius: 1.4rem 0 0 1.4rem;
                 outline: none;
                 padding: 0 1rem;
+                border-radius: .8rem 0 0 .8rem;
+                -webkit-border-radius: .8rem 0 0 .8rem;
+                -moz-border-radius: .8rem 0 0 .8rem;
+                -ms-border-radius: .8rem 0 0 .8rem;
+                -o-border-radius: .8rem 0 0 .8rem;
+
+                &:focus {
+                    border-radius: .8rem 0 0 0;
+                    -webkit-border-radius: .8rem 0 0 0;
+                    -moz-border-radius: .8rem 0 0 0;
+                    -ms-border-radius: .8rem 0 0 0;
+                    -o-border-radius: .8rem 0 0 0;
+                }
             }
 
             .header__inputSubmit {
-                border-radius: 0 1.4rem 1.4rem 0;
-                -webkit-border-radius: 0 1.4rem 1.4rem 0;
-                -moz-border-radius: 0 1.4rem 1.4rem 0;
-                -ms-border-radius: 0 1.4rem 1.4rem 0;
-                -o-border-radius: 0 1.4rem 1.4rem 0;
+                border-radius: 0 .8rem .8rem 0;
+                -webkit-border-radius: 0 .8rem .8rem 0;
+                -moz-border-radius: 0 .8rem .8rem 0;
+                -ms-border-radius: 0 .8rem .8rem 0;
+                -o-border-radius: 0 .8rem .8rem 0;
                 outline: none;
                 padding: 0 1rem;
                 cursor: pointer;
@@ -103,13 +144,16 @@
 
         .header__Sign {
             flex: 1;
+            display: flex;
+
+            justify-content: flex-end;
 
             .header__Sign__container_user {
-                flex: 1;
                 height: 100%;
 
                 a {
                     text-decoration: none;
+
                     .header__Sign__box_user {
                         position: relative;
                         display: flex;
@@ -122,6 +166,13 @@
                         font-size: 1.6rem;
                         color: #fff;
 
+                        .header__Sign_user {
+                            overflow: hidden;
+                            width: 10rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
                     }
                 }
 
@@ -223,6 +274,7 @@
 
             .header__search {
                 flex: 0;
+                position: relative;
                 display: none;
 
                 .header__inputSearch {
@@ -366,29 +418,76 @@
                 }
             }
 
-            .header__box_search {
+            .header__search {
                 flex: 3;
+                position: relative;
                 display: flex;
-
-                input {
-                    padding: 1rem;
-
-                    &:first-child {
-                        outline: none;
-                        border-radius: 0.3rem 0 0 .3rem;
-                        -webkit-border-radius: 0.3rem 0 0 .3rem;
-                        -moz-border-radius: 0.3rem 0 0 .3rem;
-                        -ms-border-radius: 0.3rem 0 0 .3rem;
-                        -o-border-radius: 0.3rem 0 0 .3rem;
-                        flex: 1;
+    
+                .header__form_dropDown_reposive {
+                    position: absolute;
+                    z-index: 5;
+                    top: 100%;
+                    display: none;
+                    left: 0;
+                    background-color: #fff;
+                    width: 100%;
+    
+                    ul {
+                        width: 100%;
+    
+                        li {
+                            list-style: none;
+                            padding: 1rem;
+                            font-weight: bold;
+    
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                            a{
+                                text-decoration: underline;
+                                color: #000;
+                            }
+                        }
+    
+                        border-radius: .8rem 0 0 .8rem;
+                        -webkit-border-radius: .8rem 0 0 .8rem;
+                        -moz-border-radius: .8rem 0 0 .8rem;
+                        -ms-border-radius: .8rem 0 0 .8rem;
+                        -o-border-radius: .8rem 0 0 .8rem;
                     }
-
-                    &:last-child {
-                        border-radius: 0 .3rem .3rem 0;
-                        -webkit-border-radius: 0 .3rem .3rem 0;
-                        -moz-border-radius: 0 .3rem .3rem 0;
-                        -ms-border-radius: 0 .3rem .3rem 0;
-                        -o-border-radius: 0 .3rem .3rem 0;
+                }
+    
+                .header__inputSearch {
+                    flex: 1;
+                    outline: none;
+                    padding: 0 1rem;
+                    border-radius: .8rem 0 0 .8rem;
+                    -webkit-border-radius: .8rem 0 0 .8rem;
+                    -moz-border-radius: .8rem 0 0 .8rem;
+                    -ms-border-radius: .8rem 0 0 .8rem;
+                    -o-border-radius: .8rem 0 0 .8rem;
+    
+                    &:focus {
+                        border-radius: .8rem 0 0 0;
+                        -webkit-border-radius: .8rem 0 0 0;
+                        -moz-border-radius: .8rem 0 0 0;
+                        -ms-border-radius: .8rem 0 0 0;
+                        -o-border-radius: .8rem 0 0 0;
+                    }
+                }
+    
+                .header__inputSubmit {
+                    border-radius: 0 .8rem .8rem 0;
+                    -webkit-border-radius: 0 .8rem .8rem 0;
+                    -moz-border-radius: 0 .8rem .8rem 0;
+                    -ms-border-radius: 0 .8rem .8rem 0;
+                    -o-border-radius: 0 .8rem .8rem 0;
+                    outline: none;
+                    padding: 0 1rem;
+                    cursor: pointer;
+    
+                    &:hover {
+                        opacity: 0.9;
                     }
                 }
             }
@@ -399,12 +498,21 @@
                 justify-content: flex-end;
                 align-items: center;
 
+                .header__Sign_user {
+                    overflow: hidden;
+                    width: 10rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
                 .header__Sign__container_user {
                     flex: 1;
                     height: 100%;
 
                     a {
                         text-decoration: none;
+
                         .header__Sign__box_user {
                             position: relative;
                             display: flex;
@@ -487,6 +595,7 @@
 
             .header__search {
                 flex: 0;
+                position: relative;
                 display: none;
             }
 
@@ -610,29 +719,76 @@
                 }
             }
 
-            .header__box_search {
+            .header__search {
                 flex: 3;
+                position: relative;
                 display: flex;
-
-                input {
-                    padding: 1rem;
-
-                    &:first-child {
-                        outline: none;
-                        border-radius: 0.3rem 0 0 .3rem;
-                        -webkit-border-radius: 0.3rem 0 0 .3rem;
-                        -moz-border-radius: 0.3rem 0 0 .3rem;
-                        -ms-border-radius: 0.3rem 0 0 .3rem;
-                        -o-border-radius: 0.3rem 0 0 .3rem;
-                        flex: 1;
+    
+                .header__form_dropDown_reposive {
+                    position: absolute;
+                    z-index: 5;
+                    top: 100%;
+                    display: none;
+                    left: 0;
+                    background-color: #fff;
+                    width: 100%;
+    
+                    ul {
+                        width: 100%;
+    
+                        li {
+                            list-style: none;
+                            padding: 1rem;
+                            font-weight: bold;
+    
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                            a{
+                                text-decoration: underline;
+                                color: #000;
+                            }
+                        }
+    
+                        border-radius: .8rem 0 0 .8rem;
+                        -webkit-border-radius: .8rem 0 0 .8rem;
+                        -moz-border-radius: .8rem 0 0 .8rem;
+                        -ms-border-radius: .8rem 0 0 .8rem;
+                        -o-border-radius: .8rem 0 0 .8rem;
                     }
-
-                    &:last-child {
-                        border-radius: 0 .3rem .3rem 0;
-                        -webkit-border-radius: 0 .3rem .3rem 0;
-                        -moz-border-radius: 0 .3rem .3rem 0;
-                        -ms-border-radius: 0 .3rem .3rem 0;
-                        -o-border-radius: 0 .3rem .3rem 0;
+                }
+    
+                .header__inputSearch {
+                    flex: 1;
+                    outline: none;
+                    padding: 0 1rem;
+                    border-radius: .8rem 0 0 .8rem;
+                    -webkit-border-radius: .8rem 0 0 .8rem;
+                    -moz-border-radius: .8rem 0 0 .8rem;
+                    -ms-border-radius: .8rem 0 0 .8rem;
+                    -o-border-radius: .8rem 0 0 .8rem;
+    
+                    &:focus {
+                        border-radius: .8rem 0 0 0;
+                        -webkit-border-radius: .8rem 0 0 0;
+                        -moz-border-radius: .8rem 0 0 0;
+                        -ms-border-radius: .8rem 0 0 0;
+                        -o-border-radius: .8rem 0 0 0;
+                    }
+                }
+    
+                .header__inputSubmit {
+                    border-radius: 0 .8rem .8rem 0;
+                    -webkit-border-radius: 0 .8rem .8rem 0;
+                    -moz-border-radius: 0 .8rem .8rem 0;
+                    -ms-border-radius: 0 .8rem .8rem 0;
+                    -o-border-radius: 0 .8rem .8rem 0;
+                    outline: none;
+                    padding: 0 1rem;
+                    cursor: pointer;
+    
+                    &:hover {
+                        opacity: 0.9;
                     }
                 }
             }
@@ -643,6 +799,13 @@
                 justify-content: flex-end;
                 align-items: center;
 
+                .header__Sign_user {
+                    overflow: hidden;
+                    width: 10rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
 
                 .header__Sign__container_user {
                     flex: 1;

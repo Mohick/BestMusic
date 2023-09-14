@@ -9,6 +9,7 @@ import SignIn from "./Modal Sign/Modal Sign In"
 import { showModalSignIn } from "./Modal Sign/show modal sign in"
 import { showModalSignUp } from "./Modal Sign/show modal sign up"
 import { useEffect, useState } from "react"
+import { handleSearch, handleForcusSearch, handleBlurSearch,handleBlurSearchReponsive,handleForcusSearchReponsive } from "./handle Search"
 import { checkUser } from "./findUser"
 export default function Header() {
     let [user, setUser] = useState()
@@ -55,8 +56,20 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className={clsx(cssHeader.header__search)}>
-                    <input type="search" name="" id="" placeholder="Find Name Song" className={clsx(cssHeader.header__inputSearch)} />
+                    <input type="search" name=""
+                        onChange={(e) => {
+                            handleSearch(e.target)
+                        }}
+                        autoComplete="false"
+                        onFocus={e => handleForcusSearch(e.target)}
+                        onBlur={e => handleBlurSearch(e.target)}
+                        id="" placeholder="Find Name Song" className={clsx(cssHeader.header__inputSearch)} />
                     <input type="submit" value="Search" className={clsx(cssHeader.header__inputSubmit)} />
+                    <div className={clsx(cssHeader.header__form_dropDown)}  >
+                        <ul>
+
+                        </ul>
+                    </div>
                 </div>
                 <div className={clsx(cssHeader.header__Sign)}>
                     {!!user ?
@@ -86,8 +99,8 @@ export default function Header() {
                 </div>
             </div>
             <div className={clsx(cssHeader.header__box_mobile_tablet)} id="gridSystems">
-                <menu className={clsx(cssHeader.header__box_menu)} onClick={e => handleModal(e)}>
-                    <div className={clsx(cssHeader.header__menu_bar)}>
+                <menu className={clsx(cssHeader.header__box_menu)} >
+                    <div className={clsx(cssHeader.header__menu_bar)} onClick={e => handleModal(e)}>
                         <div className={clsx(cssHeader.header__menu_bar1)}></div>
                         <div className={clsx(cssHeader.header__menu_bar2)}></div>
                         <div className={clsx(cssHeader.header__menu_bar3)}></div>
@@ -101,9 +114,21 @@ export default function Header() {
                         </div>
                     </div>
                 </menu>
-                <div className={clsx(cssHeader.header__box_search)}>
-                    <input type="search" placeholder="Find Name Song" name="" id="" />
-                    <input type="submit" value="Search" />
+                <div className={clsx(cssHeader.header__search)}>
+                    <input type="search" name=""
+                        onChange={(e) => {
+                            handleSearch(e.target)
+                        }}
+                        autoComplete="false"
+                        onFocus={e => handleForcusSearchReponsive(e.target)}
+                        onBlur={e => handleBlurSearchReponsive(e.target)}
+                        id="" placeholder="Find Name Song" className={clsx(cssHeader.header__inputSearch)} />
+                    <input type="submit" value="Search" className={clsx(cssHeader.header__inputSubmit)} />
+                    <div className={clsx(cssHeader.header__form_dropDown_reposive)}  >
+                        <ul>
+
+                        </ul>
+                    </div>
                 </div>
                 <div className={clsx(cssHeader.header__box_sign)}>
 
