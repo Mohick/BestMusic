@@ -1,12 +1,13 @@
-import cssPage from "../Pages ProDucts.module.scss"
+import cssProduct from "../Product.module.scss";
+
 
 export function durationSongs() {
 
-    const boxVoices = document.querySelector(`.${cssPage.ProDucts__box_voices_slider}`)
+    const boxVoices = document.querySelector(`.${cssProduct.ProDucts__box_voices_slider}`)
     const audio = boxVoices.querySelector(`audio`)
 
-    let currentTimeVoice = document.querySelector(`.${cssPage.ProDucts__box_voices_currentTimes}`)
-    let durationVoice = document.querySelector(`.${cssPage.ProDucts__box_voices_duration}`)
+    let currentTimeVoice = document.querySelector(`.${cssProduct.ProDucts__box_voices_currentTimes}`)
+    let durationVoice = document.querySelector(`.${cssProduct.ProDucts__box_voices_duration}`)
     let minutesVoice = Math.floor((audio.duration / 60))
     let secondsVoice = Math.floor((audio.duration % 60))
     if (durationVoice) {

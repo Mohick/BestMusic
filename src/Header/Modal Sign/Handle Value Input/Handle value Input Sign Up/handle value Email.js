@@ -4,7 +4,7 @@ export function handleOnblurEmail(e) {
     const parentElement = e.parentElement;
     const alert = parentElement.querySelector(`.${cssSignUp.modal__sign_box_Alert}`).
         querySelector(`span`)
-    const api = 'http://localhost:3000/Account'
+    const api = 'http://127.0.0.1:8000/account/?format=json'
     fetch(api)
         .then(res => res.json())
         .then(data => {

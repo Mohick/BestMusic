@@ -24,7 +24,7 @@ export function submitSignUp(e) {
     handleOnblurpassword(inputPassword)
     handleOnblurRe_enterPassword(inputRe__enter_password)
 
-    const api = "http://localhost:3000/Account"
+    const api = "http://127.0.0.1:8000/account/?format=json"
 
     fetch(api)
         .then(res => res.json())
@@ -68,16 +68,13 @@ export function submitSignUp(e) {
                     username: inputUsername.value.trim(),
                     email: inputEmail.value.trim(),
                     password: inputPassword.value.trim(),
-                    playList: [
-                    ],
-                    liked: [
 
-                    ]
                 }
                 var account = {
                     username: obUser.username,
                     email: obUser.email,
                     password: obUser.password,
+                    
                 }
                 var accountString = JSON.stringify(account);
                 var date = new Date();

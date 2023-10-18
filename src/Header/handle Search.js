@@ -11,7 +11,7 @@ export function handleSearch(value) {
     }
     const lowerCaseValue = value.value.toLowerCase().trim();
     const valueInput = removeAccents(lowerCaseValue);
-    fetch("http://localhost:3000/Discover")
+    fetch("http://127.0.0.1:8000/discover/?format=json  ")
         .then(function (response) {
             return response.json()
         })

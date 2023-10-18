@@ -1,12 +1,14 @@
 import { json } from "react-router-dom"
-import cssPage from "../Pages ProDucts.module.scss"
+import cssLiked from '../liked.module.scss';
+
+
 import axios from "axios"
-export function handlePutLIke(indexPage, value, page, like) {
-    const tagParents = value.parentElement
+export function handlePutLIke(indexPage, page, value, like) {
+    const tagParents = page.parentElement
     // Box Liked defaults 
-    let likedDefault = tagParents.querySelector(`.${cssPage.ProDucts_control_likeflautLike}`)
+    let likedDefault = tagParents.querySelector(`.${cssLiked.ProDucts_control_likeflautLike}`)
     // Box Liked 
-    let liked = tagParents.querySelector(`.${cssPage.ProDucts_control_like}`)
+    let liked = tagParents.querySelector(`.${cssLiked.ProDucts_control_like}`)
 
     const config = {
         headers: {
@@ -14,18 +16,23 @@ export function handlePutLIke(indexPage, value, page, like) {
         },
         timeout: 0
     }
-    const url = `http://localhost:3000/Discover/${indexPage}`
-    page.like = like
-    if (likedDefault.matches("." + cssPage.showLIked)) {
-        axios.put(url, page, config)
+    const url = `http://127.0.0.1:8000/upDateDiscover/${indexPage}`
+
+    value.like = like
+    
+    if (likedDefault.matches("." + cssLiked.showLIked)) {
+        
+        axios.patch(url, value, config)
             .catch(error => {
-                console.Error("putLiked.js");
+                // console.Error("putLiked.js");
 
             });
-    } else if (liked.matches("." + cssPage.showLIked)) {
-        axios.put(url, page, config)
+    } else if (liked.matches("." + cssLiked.showLIked)) {
+        
+
+        axios.patch(url, value, config)
             .catch(error => {
-                console.Error("putLiked.js");
+                // console.Error("putLiked.js");
             });
     }
 

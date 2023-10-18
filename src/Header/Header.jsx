@@ -12,11 +12,13 @@ import { useEffect, useState } from "react"
 import { handleSearch, handleForcusSearch, handleBlurSearch,handleBlurSearchReponsive,handleForcusSearchReponsive } from "./handle Search"
 import { checkUser } from "./findUser"
 export default function Header() {
+
+    
     let [user, setUser] = useState()
     useEffect(() => {
         let check = true
         if (!!checkUser()) {
-            fetch("http://localhost:3000/Account")
+            fetch("http://127.0.0.1:8000/account/?format=json")
                 .then((response) => response.json())
                 .then((response) => {
                     const findUser = response.find(user => user.username == checkUser().username)

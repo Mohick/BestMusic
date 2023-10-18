@@ -1,0 +1,53 @@
+.ProDucts_control_likes {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+
+    .ProDucts_control_likeflautLike {
+        display: none;
+        position: relative;
+
+
+
+        i {
+            margin-right: .5rem;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        &.showLIked {
+            display: block;
+        }
+    }
+
+    .ProDucts_control_like {
+        display: none;
+        position: relative;
+
+        &.showLIked {
+            display: block;
+        }
+
+        i {
+            margin-right: .5rem;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+}

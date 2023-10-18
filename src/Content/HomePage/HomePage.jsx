@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import Slide from "./content Home Page/Slider";
 import TopTrending from "./content Home Page/Top Trending";
-import RecentView from "./content Home Page/RecentView";
+import RecentLike from './content Home Page/RecentLike'
 import cssHomePage from "./HomePage.module.scss"
 export default function HomePage() {
 
@@ -11,7 +11,7 @@ export default function HomePage() {
       <div id="gridSystems">
         <Slide />
         <TopTrending />
-        <RecentView />
+        <RecentLike />
       </div>
     </div>
   )

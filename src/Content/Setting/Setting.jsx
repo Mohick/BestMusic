@@ -16,7 +16,7 @@ function Setting() {
         let check = true
         if (check) {
             if (!!checkUser()) {
-                fetch("http://localhost:3000/Account")
+                fetch("http://127.0.0.1:8000/account/?format=json")
                     .then((response) => response.json())
                     .then((response) => {
                         const findUser = response.find(user => user.username == checkUser().username)

@@ -2,9 +2,9 @@ import clsx from 'clsx'
 import cssDiscover from './Discover VN.module.scss'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-export default function SongsUSA() {
+export default function SongsVN() {
 
-    const getAPI = 'http://localhost:3000/Discover'
+    const getAPI = 'http://127.0.0.1:8000/discover/?format=json'
     let [apis, setAPI] = useState([])
     useEffect(() => {
         var check = true

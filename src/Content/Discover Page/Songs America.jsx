@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 export default function SongsUSA() {
 
-    const getAPI = 'http://localhost:3000/Discover'
+    const getAPI = 'http://127.0.0.1:8000/discover/?format=json'
     let [apis, setAPI] = useState([])
     useEffect(() => {
         var check = true

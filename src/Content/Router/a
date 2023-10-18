@@ -1,0 +1,52 @@
+ <div className={clsx(cssProduct.ProDucts_control_likes)}>
+                                {/* {children = like.find(title => title.title == children.title)} */}
+
+                                {!!user ?
+                                    <>
+                                        {user.liked.find(value => value == children.id) && children ?
+                                            <>
+                                                <div className={clsx(cssProduct.ProDucts_control_like, cssProduct.showLIked)} onClick={(e) => {
+                                                    setUnLike(children.like - 1),
+                                                        handleLiked(children.id, e.target, user),
+                                                        handlePutLIke(children.id, e.target, children, children.like - 1)
+                                                }} >
+                                                    <i className="fa-solid fa-heart"></i>
+                                                    <span>{children.like}</span>
+                                                </div>
+                                                <div className={clsx(cssProduct.ProDucts_control_likeflautLike)} onClick={(e) => {
+                                                    setLike(children.like + 1),
+                                                        handleLiked(children.id, e.target, user),
+                                                        handlePutLIke(children.id, e.target, children, children.like + 1)
+                                                }} >
+                                                    <i className="fa-regular fa-heart"></i>
+                                                    <span>{children.like}</span>
+                                                </div>
+                                            </> :
+                                            <>
+                                                <div className={clsx(cssProduct.ProDucts_control_like,)} onClick={(e) => {
+                                                    setUnLike(children.like - 1),
+                                                        handleLiked(children.id, e.target, user),
+                                                        handlePutLIke(children.id, e.target, children, children.like - 1)
+
+                                                }} >
+                                                    <i className="fa-solid fa-heart"></i>
+                                                    <span>{children.like}</span>
+                                                </div>
+                                                <div className={clsx(cssProduct.ProDucts_control_likeflautLike, cssProduct.showLIked)} onClick={(e) => {
+                                                    setLike(children.like + 1),
+                                                        handleLiked(children.id, e.target, user)
+                                                        ,
+                                                        handlePutLIke(children.id, e.target, children, children.like + 1)
+                                                }} >
+                                                    <i className="fa-regular fa-heart"></i>
+                                                    <span>{children.like}</span>
+                                                </div>
+                                            </>
+                                        }
+                                    </> :
+                                    <div className={clsx(cssProduct.ProDucts_control_likeflautLike, cssProduct.showLIked)} onClick={showModalSignIn}>
+                                        <i className="fa-regular fa-heart"> </i>
+                                        {/* <span>{children.like}</span> */}{console.log(children)}
+                                    </div>
+                                }
+                            </div>

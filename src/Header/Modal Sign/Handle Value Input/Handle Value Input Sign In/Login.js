@@ -14,7 +14,7 @@ export function logIn() {
 
 
     let regexCheckEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const api = "http://localhost:3000/Account"
+    const api = "http://127.0.0.1:8000/account/?format=json"
     fetch(api)
         .then(res => res.json())
         .then(res => {

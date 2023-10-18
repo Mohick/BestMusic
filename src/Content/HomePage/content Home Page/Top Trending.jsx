@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 export default function TopTrending() {
-    const getAPI = 'http://localhost:3000/TopTrending'
+    const getAPI = 'http://127.0.0.1:8000/discover/?format=json'
     let [apis, setAPI] = useState([])
     useEffect(() => {
         var check = true

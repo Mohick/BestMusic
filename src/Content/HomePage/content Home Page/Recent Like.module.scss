@@ -18,7 +18,13 @@
             color: red;
         }
     }
-
+    .not_found {
+        width: 100%;
+        h2 {
+            color: #fff;
+            text-align: center;
+        }
+    }
     .formTrending__box_items {
         width: 100%;
         display: grid;
